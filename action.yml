@@ -1,0 +1,15 @@
+name: 'PHP Code Style (phpcs)'
+description: 'PHPCS run'
+branding:
+  icon: 'check-circle'
+  color: 'green'
+inputs:
+  dir:
+    description: 'Folder to check code style'
+    required: false
+    default: '.'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.dir }}
