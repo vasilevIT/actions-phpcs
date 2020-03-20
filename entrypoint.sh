@@ -15,6 +15,7 @@ echo "PHP Version : ${PHP_FULL_VERSION}"
 if [ ! -d "${DIR_TO_SCAN}" ] && [ ! -f "${DIR_TO_SCAN}" ]; then
   echo "FALLBACK E${DIR_TO_SCAN}E"
   echo `ls`
+  echo `pwd`
   php -d memory_limit=-1 /phpcs -pv
   echo "\nInvalid directory or file: ${DIR_TO_SCAN}"
   echo "\n\n"
