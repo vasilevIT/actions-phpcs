@@ -6,7 +6,7 @@ PHP_FULL_VERSION=$(php -r 'echo phpversion();')
 if [ -z "$1" ]; then
   DIR_TO_SCAN="."
 else
-  DIR_TO_SCAN="$1"
+  DIR_TO_SCAN="./$1"
 fi
 
 echo "## Running PHPCS on ${DIR_TO_SCAN}"
