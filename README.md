@@ -19,8 +19,4 @@ So, make sure this file exists and has all the rules you want to apply.
 ### Arguments
 By default, `phpcs` is ran without any argument.
 
-If you want, you can specify scan directory by adding 
-```yaml
-  with:
-    dir: './src' 
-```
+If you want, you can specify scan directory on anything else on your `phpcs.xml.dist`
