@@ -1,7 +1,8 @@
 name: 'PHP Code Style (phpcs)'
 description: 'PHPCS run'
+author: 'David Lumaye (chindit)'
 branding:
-  icon: 'check-circle'
+  icon: 'eye'
   color: 'green'
 inputs:
   dir:
