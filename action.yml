@@ -9,8 +9,13 @@ inputs:
     description: 'Folder to check code style'
     required: false
     default: '.'
+  cli:
+    description: 'CLI arguments to run'
+    required: false
+    default: ''
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.dir }}
+    - ${{ inputs.cli }}
