@@ -42,12 +42,27 @@ By default, `phpcs` will look for a `phpcs.xml.dist` file at the root of your pr
 
 So, make sure this file exists and has all the rules you want to apply.
 
+If you don't want to use default configuration or add custom parameters, you can
+use `cli` argument, as described below.
+
 ### Arguments
 By default, `phpcs` is ran without any argument.
 
+##### Directory
 If you want, you can specify scan directory on anything else on your `phpcs.xml.dist`
 
 You can also specify scan directory by adding
 ```yaml	
   with:	
     dir: './src' 
+```
+
+##### CLI arguments
+You can also add custom CLI arguments if you want.
+```yaml
+    with:
+        cli: '--version'
+```
+
+Note that your arguments must be valid and include `-` or `--`.
+The CLI string will be added to executed PHPCS CLI, just after the directory to scan.

@@ -12,7 +12,7 @@ inputs:
     cli:
         description: 'CLI arguments to run'
         required: false
-        default: ''
+        default: ' '
 runs:
     using: 'docker'
     image: 'Dockerfile'
