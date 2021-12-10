@@ -29,4 +29,4 @@ if [ ! -d "${DIR_TO_SCAN}" ] && [ ! -f "${DIR_TO_SCAN}" ]; then
 fi
 
 echo "php -d memory_limit=-1 /phpcs ${DIR_TO_SCAN} -pv ${CLI_ARGS}"
-php -d memory_limit=-1 /phpcs ${DIR_TO_SCAN} -pv ${CLI_ARGS}
+php -d memory_limit=-1 /phpcs ${DIR_TO_SCAN} -pvn ${CLI_ARGS}
