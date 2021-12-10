@@ -1,5 +1,5 @@
 # actions-phpcs
-PHPCS action for GitHub on PHP 7.4
+PHPCS action for GitHub on PHP 8.1
 
 ## Setup
 Add these lines to your YAML config file
