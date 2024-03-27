@@ -4,7 +4,7 @@ set -e
 PHP_FULL_VERSION=$(php -r 'echo phpversion();')
 
 if [ -z "$1" ]; then
-  DIR_TO_SCAN="."
+  DIR_TO_SCAN=""
 else
   DIR_TO_SCAN="$1"
 fi
@@ -20,9 +20,9 @@ echo "PHP Version : ${PHP_FULL_VERSION}"
 echo "CLI arguments detected: ${CLI_ARGS}"
 
 
-if [ ! -d "${DIR_TO_SCAN}" ] && [ ! -f "${DIR_TO_SCAN}" ]; then
+if [ -n "${DIR_TO_SCAN}" ] && [ ! -d "${DIR_TO_SCAN}" ] && [ ! -f "${DIR_TO_SCAN}" ]; then
   php -d memory_limit=-1 /phpcs -pvn
-  echo "\nInvalid directory or file: ${DIR_TO_SCAN}"
+  echo "\nInvalid directory or file: ${DIR_TO_SCAN};"
   echo "\n\n"
 
   exit 2
