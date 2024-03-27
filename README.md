@@ -5,7 +5,7 @@ PHPCS action for GitHub on PHP 8.1
 Add these lines to your YAML config file
 ```yaml
 - name: PHP Code Style (phpcs)
-  uses: chindit/actions-phpcs@master
+  uses: vasilevIT/actions-phpcs@master
 ```
 
 **WARNING** : Be sure you have this line **before** :
@@ -28,7 +28,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: PHP Code Style (phpcs)
-        uses: chindit/actions-phpcs@master
+        uses: vasilevIT/actions-phpcs@master
         with:
           # Folder to check code style
           dir: src/
